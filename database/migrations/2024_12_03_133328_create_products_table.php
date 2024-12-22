@@ -19,8 +19,8 @@ return new class extends Migration
             $table->text('productDescription');
             $table->integer('productCost');
             $table->integer('productDiscount');
-            $table->integer('productReviews');
-            $table->boolean('active');
+            $table->integer('productReviews')->default(0);
+            $table->boolean('active')->default(true);
             $table->timestamps();
         });
     }
